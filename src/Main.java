@@ -2,14 +2,22 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int a = 1;
 
-        System.out.println(a);
+    }
 
-        a = a + 2; // 3
 
-        a += 2; // 5
+    public static void RelationalOperators(){
+        int a = 6;
+        int b = 2;
 
-        System.out.println(a);
+        System.out.println(a == b);
+
+        System.out.println(a < b);
+
+        System.out.println(a > b);
+
+        System.out.println(a <= b && a >= b && b <= a && b >= a);
+
+        System.out.println(a != b);
     }
 }
