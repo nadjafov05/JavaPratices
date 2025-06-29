@@ -3,9 +3,44 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
+        System.out.println("eded daxil edin: ");
+        int eded = sc.nextInt();
+
+
     }
 
+    public static void ifelseOperators1(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("eded daxil edin: ");
+        int eded = sc.nextInt();
 
+        if (eded<0){
+            System.out.println("Menfi ededdir");
+        }else if (eded == 0){
+            System.out.println("eded 0 dir");
+        }else {
+            System.out.println("reqem musbetdir");
+        }
+    }
+    public static void ternaryOperators3(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("reqem daxil edin: ");
+        int enterNumber = sc.nextInt();
+
+
+        String neticeEsas = ((enterNumber<0)? "Menfi ededdir": (enterNumber == 0)? "eded 0 dir": (enterNumber >0 && enterNumber <100)? "Yaxsi ededdir": "Boyuk ededdir");
+        System.out.println(neticeEsas);
+    }
+    public static void ternaryOperators2(){
+
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("reqem daxil edin: ");
+        int reqemEnter = sc.nextInt();
+
+        String esasNetice = ((reqemEnter <0)? "Menfi eded": (reqemEnter == 0)? "Reqem 0 dir" : "Musbet eded" );
+    }
     public static void ternaryOperators(){
         int a = 0;
         String netice = ((a>0)? "Musbet ededdir" : "Menfi ededdir");
