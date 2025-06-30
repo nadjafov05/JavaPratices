@@ -6,6 +6,30 @@ public class Main {
     }
 
 
+    public static void serifikatNeticesi(){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Telebe adinizi daxil edin: ");
+        String telebeAd = sc.nextLine();
+
+        System.out.print("Yigdiginiz bali daxil edin: ");
+        int telebeBal = sc.nextInt();
+
+        System.out.print("Davamiyyetinizi elave edin: ");
+        int davamiyyetTelebe = sc.nextInt();
+
+        if (telebeBal >= 0 && telebeBal <= 100 && davamiyyetTelebe >= 0 && davamiyyetTelebe <= 100) {
+            if (telebeBal >= 85 && davamiyyetTelebe >= 90) {
+                System.out.println("Təbriklər," + telebeAd + "! Sən Sertifikat və Mükafat qazandın!");
+            } else if (telebeBal >= 70 && davamiyyetTelebe >= 75) {
+                System.out.println("Təbriklər," + telebeAd + "! Sən yalnız Sertifikat qazandın!");
+            } else if (telebeBal < 70 || davamiyyetTelebe < 75) {
+                System.out.println("Bağışla," + telebeAd + "! Sertifikat almaq üçün şərtləri ödəmədin!");
+            }
+        } else if (telebeBal < 0 || davamiyyetTelebe < 0 || davamiyyetTelebe > 100) {
+            System.out.println("daxil etdiyiniz bal ve davamiyyet sehvdir");
+        }
+    }
     public static void imtahanNeticesi() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Adinizi daxil edin: ");
@@ -14,16 +38,16 @@ public class Main {
         System.out.println("Yigdiginiz bali daxil edin: ");
         int kursBali = sc.nextInt();
 
-        if (kursBali < 0 || kursBali > 100){
+        if (kursBali < 0 || kursBali > 100) {
             System.out.println("Xeta : bal duzgun daxil edilmeyib..");
-        }else if (kursBali >= 90){
-            System.out.println("tebrikler, "+telebeAd+"! ela");
-        }else if (kursBali >= 70){
-            System.out.println("ehsen, "+telebeAd+"! yaxsi");
-        }else if (kursBali >= 50){
-            System.out.println("yaxsi cehd ,"+telebeAd+"! kafi");
-        }else {
-            System.out.println("tessuf - "+telebeAd + " imtahandan kecmediniz");
+        } else if (kursBali >= 90) {
+            System.out.println("tebrikler, " + telebeAd + "! ela");
+        } else if (kursBali >= 70) {
+            System.out.println("ehsen, " + telebeAd + "! yaxsi");
+        } else if (kursBali >= 50) {
+            System.out.println("yaxsi cehd ," + telebeAd + "! kafi");
+        } else {
+            System.out.println("tessuf - " + telebeAd + " imtahandan kecmediniz");
         }
     }
 
