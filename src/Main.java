@@ -5,8 +5,37 @@ public class Main {
 
     }
 
+    public static void beginnersCalculateConsole(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("a ni daxil edin: ");
+        double a = new Scanner(System.in).nextDouble();
 
-    public static void serifikatNeticesi(){
+        System.out.print("b ni daxil edin: ");
+        double b = new Scanner(System.in).nextDouble();
+
+        System.out.println("hansi emeliyyati secmek isteyirsiz? +, -, *, /");
+
+        char operations = new Scanner(System.in).nextLine().charAt(0);
+
+        double result = 0;
+
+        if (operations == '+'){
+            result = a + b;
+        }else if (operations == '-'){
+            result = a - b;
+        }else if (operations == '*'){
+            result = a * b;
+        }else if (operations == '/'){
+            result = a / b;
+        }else {
+            System.out.println("secdiyiniz emeliyyata uygun bir hesablama emeliyyati yoxdur!");
+        }
+
+        System.out.println("netice = "+ result);
+
+    }
+
+    public static void serifikatNeticesi() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Telebe adinizi daxil edin: ");
@@ -30,6 +59,7 @@ public class Main {
             System.out.println("daxil etdiyiniz bal ve davamiyyet sehvdir");
         }
     }
+
     public static void imtahanNeticesi() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Adinizi daxil edin: ");
